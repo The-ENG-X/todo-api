@@ -39,3 +39,9 @@ async function deleteTaskTest() {
 
   expect(res.statusCode).toEqual(204);
 }
+
+afterAll(async () => {
+    await new Promise(resolve => {
+      app.close(resolve);
+    });
+  });
