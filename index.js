@@ -49,6 +49,4 @@ function startServer() {
     server.close();
   }
   
-module.exports = { startServer, stopServer };
-
-module.exports = app;
+module.exports = { app, startServer, stopServer };
