@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
+let server;
 
 // Middleware
 app.use(express.json());
@@ -52,4 +53,4 @@ function startServer() {
       server = null;
     }
   }
-module.exports = { app, startServer, stopServer };
+module.exports = { app, startServer, stopServer, server  };
