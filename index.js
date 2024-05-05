@@ -38,4 +38,17 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
+let server;
+function startServer() {
+    server = app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  }
+
+  function stopServer() {
+    server.close();
+  }
+  
+module.exports = { startServer, stopServer };
+
 module.exports = app;

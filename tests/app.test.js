@@ -1,5 +1,14 @@
 const request = require('supertest');
 const app = require('../index');
+const { startServer, stopServer } = require('../index');
+
+beforeAll(() => {
+  startServer(); // Start the server before running tests
+});
+
+afterAll(() => {
+  stopServer(); // Stop the server after all tests have finished
+});
 
 describe('Todo API endpoints', () => {
   it('should create a new task', createTaskTest);
