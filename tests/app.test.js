@@ -1,5 +1,4 @@
 const request = require('supertest');
-const app = require('../index');
 const { startServer, stopServer } = require('../index');
 
 beforeAll(() => {
@@ -48,9 +47,3 @@ async function deleteTaskTest() {
 
   expect(res.statusCode).toEqual(204);
 }
-
-afterAll(async () => {
-    await new Promise(resolve => {
-      app.close(resolve);
-    });
-  });
