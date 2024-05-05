@@ -1,5 +1,5 @@
 const request = require('supertest');
-const { startServer, stopServer } = require('../index');
+const {app, startServer, stopServer } = require('../index');
 
 beforeAll(() => {
   startServer(); // Start the server before running tests
